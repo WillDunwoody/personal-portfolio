@@ -1,0 +1,49 @@
+.home-container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+}
+
+.left-container {
+  height: 100%;
+  width: 55%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.right-container {
+  width: 45%;
+  background-position: center;
+  background-size: cover;
+  background-image: url('../../images/Will.jpg');
+}
+
+.hello-world {
+  color: white;
+  margin: 0;
+  font-size: 25px;
+  font-weight: 300;
+}
+
+.im-will {
+  font-size: 100px;
+  font-weight: 300;
+  color: white;
+  font-family: 'Inter';
+  margin: 0;
+}
+
+.fullstack-container {
+  padding: 5px 15px;
+  border-radius: 10px;
+  font-size: 20px;
+  text-align: center;
+  margin: 0;
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+}

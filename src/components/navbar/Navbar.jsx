@@ -1,8 +1,10 @@
 import { Link, Route, Routes } from 'react-router-dom'
+import Colors from '../../utilities/Color'
+import './Navbar.css'
 
 export default function Navbar() {
   return (
-    <div className="navbar">
+    <div className="navbar" style={{backgroundColor: Colors.YELLOW}}>
       <ul>
         <li><Link to="/">Home</Link></li>
         <li><Link to="/about">About</Link></li>

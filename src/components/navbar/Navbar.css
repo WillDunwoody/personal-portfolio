@@ -1,0 +1,15 @@
+.navbar {
+  height: 40vh;
+  margin-left: 2vw;
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.navbar > ul {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  list-style: none;
+}
