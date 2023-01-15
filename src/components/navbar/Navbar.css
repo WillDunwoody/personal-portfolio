@@ -1,15 +1,35 @@
 .navbar {
-  height: 40vh;
+  height: 30vh;
   margin-left: 2vw;
   display: flex;
   align-items: center;
   border-radius: 10px;
+  transition: 0.5s;
 }
 
 .navbar > ul {
   height: 100%;
+  width: 1vw;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
+  padding: 10px;
   list-style: none;
+}
+
+.list-items {
+ display: flex;
+ align-items: center;
+ font-size: 20px;
+}
+
+.link-items {
+  padding: 10px 20px;
+  border-radius: 0 5px 5px 0;
+  transition: 0.5s;
+  font-weight: 600;
+}
+
+a {
+  text-decoration: none;
 }
