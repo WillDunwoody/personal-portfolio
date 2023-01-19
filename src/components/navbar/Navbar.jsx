@@ -4,8 +4,6 @@ import { faUser, faFolder, faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import './Navbar.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
-console.log()
-
 function changeColor(color) {
   document.getElementById('navbar').style.backgroundColor = color.color
   if (color.element !== undefined) {
