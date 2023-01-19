@@ -12,13 +12,19 @@ export default function About() {
     }, 100)
     setTimeout(() => {
      document.getElementById('header-container').style.opacity = 1
-    }, 400)
+    }, 300)
     setTimeout(() => {
-     document.getElementById('main-text-container').style.opacity = 1
+     document.getElementById('p-one').style.opacity = 1
+    }, 500)
+    setTimeout(() => {
+     document.getElementById('p-two').style.opacity = 1
     }, 700)
     setTimeout(() => {
+     document.getElementById('p-three').style.opacity = 1
+    }, 900)
+    setTimeout(() => {
      document.getElementById('language-container').style.opacity = 1
-    }, 1000)
+    }, 1100)
     setTimeout(() => {
      document.getElementById('download-container').style.opacity = 1
     }, 1300)
@@ -32,10 +38,11 @@ export default function About() {
       <div className="about-right-container">
         <div className="text-container">
           <h1 className="header trans" id="header-container">About</h1>
-          <p className="main-text trans" id="main-text-container">My name is Will Dunwoody. Originally from Northern Ireland, currently based in Italy, I enjoy being creative and designing websites and web apps.<br /><br />
-            I am always striving to learn and develop new skills to become a better developer. <br /><br />
-            With a varied background including Drone Pilot, Teacher and Engineer I can create creative, well structured and functional sites.
-          </p>
+          <div className="main-text">
+            <p className="trans" id="p-one">My name is Will Dunwoody. Originally from Northern Ireland, currently based in Italy, I enjoy being creative and designing websites and web apps.</p>
+            <p className="trans" id="p-two">I am always striving to learn and develop new skills to become a better developer.</p>
+            <p className="trans" id="p-three">With a varied background including Drone Pilot, Teacher and Engineer I can create creative, well structured and functional sites.</p>
+          </div>
           <div id="language-container" className="trans">
             <h2 className="language-text" style={{color: Colors.ORANGE, fontWeight: 300}}>
               Languages I speak

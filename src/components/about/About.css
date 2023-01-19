@@ -38,7 +38,7 @@
 .trans {
   margin-top: 10px;
   opacity: 0;
-  transition: 1s;
+  transition: 1.5s;
 }
 
 .download-link {
@@ -48,6 +48,7 @@
   font-weight: 300;
   color: var(--orange-bg-color);
   transition: 0.5s;
+  border: 2px solid var(--orange-bg-color)
 }
 
 .download-link:hover {
