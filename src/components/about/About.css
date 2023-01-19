@@ -1,0 +1,56 @@
+.about-left-container {
+  height: 100vh;
+  width: 20%;
+}
+
+#nav-container {
+  margin-top: 0;
+}
+
+.about-right-container {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.text-container {
+  width: 60%;
+}
+
+.header {
+  font-weight: 300;
+  font-size: 50px;
+  text-decoration: underline;
+  color: var(--orange-bg-color);
+}
+
+.main-text {
+  font-size: 20px;
+}
+
+.language-text {
+  text-align: center;
+}
+
+.trans {
+  margin-top: 10px;
+  opacity: 0;
+  transition: 1s;
+}
+
+.download-link {
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 10px;
+  font-weight: 300;
+  color: var(--orange-bg-color);
+  transition: 0.5s;
+}
+
+.download-link:hover {
+  color: white;
+  background-color: var(--orange-bg-color);
+}
