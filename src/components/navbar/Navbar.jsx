@@ -39,6 +39,8 @@ function Navbar() {
     return <AboutNav one="portfolio" two="contact" current="about" />
   } else if(window.location.pathname == "/portfolio")  {
     return <AboutNav one="about" two="contact" current="portfolio" />
+  } else if(window.location.pathname == "/contact")  {
+    return <AboutNav one="about" two="portfolio" current="contact" />
   }
 }
 
