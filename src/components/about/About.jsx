@@ -32,10 +32,10 @@ export default function About() {
 
   return (
     <div className="home-container">
-      <div id="nav-container" className="about-left-container trans">
+      <div id="nav-container" className="left-container trans">
         <Navbar />
       </div>
-      <div className="about-right-container">
+      <div className="right-container">
         <div className="text-container">
           <h1 className="header trans" id="header-container">About</h1>
           <div className="main-text">
@@ -44,7 +44,7 @@ export default function About() {
             <p className="trans" id="p-three">With a varied background including Drone Pilot, Teacher and Engineer I can create creative, well structured and functional sites.</p>
           </div>
           <div id="language-container" className="trans">
-            <h2 className="language-text" style={{color: Colors.ORANGE, fontWeight: 300}}>
+            <h2 className="language-text" style={{color: Colors.about, fontWeight: 300}}>
               Languages I speak
             </h2>
             <p className="language-text">

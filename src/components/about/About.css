@@ -1,4 +1,4 @@
-.about-left-container {
+.left-container {
   height: 100vh;
   width: 20%;
 }
@@ -7,7 +7,7 @@
   margin-top: 0;
 }
 
-.about-right-container {
+.right-container {
   width: 80%;
   display: flex;
   flex-direction: column;

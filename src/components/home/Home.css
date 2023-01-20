@@ -5,7 +5,7 @@
   transition: 1s;
 }
 
-.left-container {
+.home-left-container {
   height: 100%;
   width: 55%;
   display: flex;
@@ -14,7 +14,7 @@
   justify-content: center;
 }
 
-.right-container {
+.home-right-container {
   opacity: 0;
   transition: 1s;
   width: 45%;
