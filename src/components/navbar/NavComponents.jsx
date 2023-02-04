@@ -20,21 +20,22 @@ function removeColor(color) {
   document.getElementById('navbar').style.backgroundColor = color.color
   let element = document.getElementById(color.element)
   if (element !== null) {
-    element.style.zIndex = -10
+    element.style.zIndex = -100
     element.style.opacity = 0
   }
 }
 
 export function HomeNavComponents(props) {
+  console.log(props)
   return (
     <li id={props.name}
-        onMouseEnter={(event) => changeColor({color: Colors[props.name], element:`${props.name}-background`})}
+        onMouseEnter={(event) => changeColor({color: Colors.home, element:`${props.name}-background`})}
         onMouseLeave={(event) => removeColor({color: Colors.home, element: `${props.name}-background`})}
         className="list-items-home">
-      <Link  to={`/${props.name}`}><FontAwesomeIcon icon={props.icon} style={{color: Colors.BLUE}} /></Link>
-      <div className='link-items-home' id={`${props.name}-background`} style={{backgroundColor: Colors[props.name]}}>
-        <Link to={`/${props.name}`} style={{color: Colors.BLUE}}
-              onMouseEnter={(event) => changeColor({color: Colors.about, element:`${props.name}-background`})}
+      <Link  to={props.name == "home" ? "/" : `/${props.name}`}><FontAwesomeIcon icon={props.icon} style={{color: Colors.BLUE}} /></Link>
+      <div className='link-items-home' id={`${props.name}-background`} style={{backgroundColor: Colors.home}}>
+        <Link to={props.name == "home" ? "/" : `/${props.name}`} style={{color: Colors.BLUE}}
+              onMouseEnter={(event) => changeColor({color: Colors.home, element:`${props.name}-background`})}
               onMouseLeave={(event) => removeColor({color: Colors.home, element: `${props.name}-background`})}>{Capitalize(props.name)}</Link>
       </div>
     </li>

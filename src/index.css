@@ -3,13 +3,22 @@
 :root {
   --yellow-bg-color: #e9c46a;
   --blue-bg-color: #264653;
-  --green-bg-color: #2a9d8f;
-  --orange-bg-color: #f4a261;
-  --red-bg-color: #e76f51;
+  --green-bg-color: #86bbd8;
+  --orange-bg-color: #b8b8d1;
+  --red-bg-color: #A76D60;
 }
 
 body {
   background-color: #264653;
   font-family: 'Inter';
   margin: 0;
+}
+
+.right-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
 }

@@ -1,9 +1,11 @@
 .project-container {
   width: 80%;
   height: 80%;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 10%;
+}
+
+.component-container {
+  position: relative;
+  transition: 0.5s;
 }
 
 .cover-image {
@@ -22,16 +24,38 @@
   text-decoration: none;
   padding: 5px 10px;
   border-radius: 5px;
-  border: 2px solid var(--red-bg-color);
+  border: 2px solid var(--yellow-bg-color);
   font-size: 12px;
   transition: 0.5s;
 }
 
 .button:hover {
-  background-color: var(--red-bg-color);
+  background-color: var(--yellow-bg-color);
   color: var(--blue-bg-color)
 }
 
-.color-red {
-  color: var(--red-bg-color);
+.color-yellow {
+  color: var(--yellow-bg-color);
+}
+
+.explenation {
+  background-color: var(--yellow-bg-color);
+  position: absolute;
+  width: 100%;
+  height: 150px;
+  margin: 0;
+  opacity: 0;
+  transition: 0.5s;
+  text-align: center;
+  text-decoration: none;
+  color: var(--blue-bg-color);
+}
+
+.explenation:hover {
+  opacity: 1;
+}
+
+.component-header {
+  font-weight: 300;
+  font-size: 50px;
 }

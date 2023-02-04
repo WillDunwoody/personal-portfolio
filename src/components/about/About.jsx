@@ -11,7 +11,7 @@ export default function About() {
      document.getElementById('nav-container').style.opacity = 1
     }, 100)
     setTimeout(() => {
-     document.getElementById('header-container').style.opacity = 1
+     document.getElementById('header-container').style.opacity = 0.2
     }, 300)
     setTimeout(() => {
      document.getElementById('p-one').style.opacity = 1
@@ -32,7 +32,7 @@ export default function About() {
 
   return (
     <div className="home-container">
-      <div id="nav-container" className="left-container trans">
+      <div id="nav-container" className="nav-container trans">
         <Navbar />
       </div>
       <div className="right-container">
@@ -44,7 +44,7 @@ export default function About() {
             <p className="trans" id="p-three">With a varied background including Drone Pilot, Teacher and Engineer I can create creative, well structured and functional sites.</p>
           </div>
           <div id="language-container" className="trans">
-            <h2 className="language-text" style={{color: Colors.about, fontWeight: 300}}>
+            <h2 className="language-text color-yellow" >
               Languages I speak
             </h2>
             <p className="language-text">
