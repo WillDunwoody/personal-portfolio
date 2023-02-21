@@ -1,9 +1,9 @@
 const Colors =
 {
   BLUE: '#264653',
-  contact: '#2a9d8f',
+  contact: '#8a7a5b',
   home: '#e9c46a',
-  about: '#f4a261',
-  portfolio: '#e76f51',
+  about: '#a6753f',
+  portfolio: '#A76D60',
 }
 export default Colors;

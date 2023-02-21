@@ -36,18 +36,6 @@ a {
   text-decoration: none;
 }
 
-.navcontainer {
-  height: 100%;
-}
-
-.nav-top-container {
-  height: 30%;
-  width: 100%;
-  background-position: center;
-  background-size: cover;
-  background-image: url('../../images/Will.jpg');
-}
-
 .navbar {
   height: 70%;
   transition: 0.5s;
