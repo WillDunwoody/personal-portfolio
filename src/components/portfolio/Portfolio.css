@@ -1,32 +1,97 @@
-.project-container {
-  width: 80%;
-  height: 80%;
+.portfolio-left-container {
+  width: 55%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--yellow-bg-color);
 }
 
+.portfolio-right-container {
+  background-color: var(--yellow-bg-color);
+  width: 45%;
+}
+
+.portfolio-header {
+  width: 61%;
+  font-weight: 300;
+  font-size: 100px;
+  z-index: -10;
+  font-family: 'Inter';
+  margin-bottom: 0;
+  color: white;
+}
+
+.display-flex {
+  display: flex;
+  flex-direction: column;
+}
+
+.project-name {
+  width: 60%;
+  font-size: 1.5rem;
+  padding: 2%;
+  border-radius: 10px;
+}
+
+.project-name:hover {
+  background-color: var(--yellow-bg-color);
+  color: var(--blue-bg-color);
+  cursor: pointer;
+}
+
+
 .component-container {
-  position: relative;
   transition: 0.5s;
+  width: 100%;
+  align-items: center;
+}
+
+.component-text-container {
+  width: 70%;
+  margin-top: 5%;
+}
+
+.component-header {
+  color: var(--blue-bg-color);
+  font-weight: 400;
+  font-size: 2.5rem;
+  margin: 0;
+}
+
+.component-text {
+  background-color: var(--yellow-bg-color);
+  color: var(--blue-bg-color);
+  opacity: 0.9q;
+  z-index: 2;
 }
 
 .cover-image {
+  opacity: 0;
+  transition: 1s;
+  height: 280px;
   width: 100%;
-  height: 150px;
-  object-fit: contain;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .button-container {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   margin-top: 10px;
+  width: 100%;
 }
 
 .button {
   text-decoration: none;
   padding: 5px 10px;
   border-radius: 5px;
-  border: 2px solid var(--yellow-bg-color);
-  font-size: 12px;
+  border: 2px solid var(--blue-bg-color);
+  font-size: 1rem;
   transition: 0.5s;
+  color: var(--blue-bg-color);
+  margin: 20px ;
 }
 
 .button:hover {
@@ -36,26 +101,4 @@
 
 .color-yellow {
   color: var(--yellow-bg-color);
-}
-
-.explenation {
-  background-color: var(--yellow-bg-color);
-  position: absolute;
-  width: 100%;
-  height: 150px;
-  margin: 0;
-  opacity: 0;
-  transition: 0.5s;
-  text-align: center;
-  text-decoration: none;
-  color: var(--blue-bg-color);
-}
-
-.explenation:hover {
-  opacity: 1;
-}
-
-.component-header {
-  font-weight: 300;
-  font-size: 50px;
 }
