@@ -67,7 +67,7 @@ export default function About() {
   })
 
   const languages = [imghtml5, imgcss3, imgjavascript, imgruby, imgrails, imgpostgresql, imggithub, imgreact, imgbootstrap ]
-  console.log(languages.map(lang => lang.match(/img-(w+)/)[1]))
+
   return (
     <div className="home-container">
       <div id="nav-container" className="nav-container trans">
@@ -96,6 +96,7 @@ export default function About() {
         <div className="language-text">
           <div className="language-container">
             {languages.map(language => {
+              console.log(language.match(/img-(\w+)/)[1])
               return (
                 <img src={language} className="language trans" id={language} />
               )
