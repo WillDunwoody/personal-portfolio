@@ -37,37 +37,37 @@ export default function About() {
     setTimeout(() => {
      document.getElementById('language-header').style.opacity = 1
     }, 1300)
-    // setTimeout(() => {
-    //  document.getElementById('html5').style.opacity = 1
-    // }, 1500)
-    // setTimeout(() => {
-    //  document.getElementById('css3').style.opacity = 1
-    // }, 1600)
-    // setTimeout(() => {
-    //  document.getElementById('javascript').style.opacity = 1
-    // }, 1700)
-    // setTimeout(() => {
-    //  document.getElementById('ruby').style.opacity = 1
-    // }, 1800)
-    // setTimeout(() => {
-    //  document.getElementById('rails').style.opacity = 1
-    // }, 1900)
-    // setTimeout(() => {
-    //  document.getElementById('postgresql').style.opacity = 1
-    // }, 2000)
-    // setTimeout(() => {
-    //  document.getElementById('github').style.opacity = 1
-    // }, 2100)
-    // setTimeout(() => {
-    //  document.getElementById('react').style.opacity = 1
-    // }, 2200)
-    // setTimeout(() => {
-    //  document.getElementById('bootstrap').style.opacity = 1
-    // }, 2300)
+    setTimeout(() => {
+     document.getElementById('html5').style.opacity = 1
+    }, 1500)
+    setTimeout(() => {
+     document.getElementById('css3').style.opacity = 1
+    }, 1600)
+    setTimeout(() => {
+     document.getElementById('javascript').style.opacity = 1
+    }, 1700)
+    setTimeout(() => {
+     document.getElementById('ruby').style.opacity = 1
+    }, 1800)
+    setTimeout(() => {
+     document.getElementById('rails').style.opacity = 1
+    }, 1900)
+    setTimeout(() => {
+     document.getElementById('postgresql').style.opacity = 1
+    }, 2000)
+    setTimeout(() => {
+     document.getElementById('github').style.opacity = 1
+    }, 2100)
+    setTimeout(() => {
+     document.getElementById('react').style.opacity = 1
+    }, 2200)
+    setTimeout(() => {
+     document.getElementById('bootstrap').style.opacity = 1
+    }, 2300)
   })
 
   const languages = [imghtml5, imgcss3, imgjavascript, imgruby, imgrails, imgpostgresql, imggithub, imgreact, imgbootstrap ]
-
+  const langId = ['html5', 'css3', 'javascript', 'ruby', 'rails', 'postgresql', 'github', 'react', 'bootstrap']
   return (
     <div className="home-container">
       <div id="nav-container" className="nav-container trans">
@@ -95,9 +95,10 @@ export default function About() {
         </h2>
         <div className="language-text">
           <div className="language-container">
-            {languages.map(language => {
+            {languages.map((language, index) => {
+              console.log(langId[index])
               return (
-                <img src={language} className="language trans" />
+                <img src={language} className="language trans" id={langId[index]}/>
               )
             })}
           </div>
