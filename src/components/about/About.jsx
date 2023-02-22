@@ -96,8 +96,9 @@ export default function About() {
         <div className="language-text">
           <div className="language-container">
             {languages.map(language => {
+              let lang = language.match(/img-(\w+)/)[1]
               return (
-                <img src={language} className="language trans" id={language.match(/img-(\w+)/)[1]} />
+                <img src={language} className="language trans" id={lang} />
               )
             })}
           </div>
