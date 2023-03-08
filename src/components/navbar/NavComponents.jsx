@@ -26,28 +26,19 @@ function removeColor(color) {
 }
 
 export function HomeNavComponents(props) {
-  console.log(props)
   return (
-    <li id={props.name}
+    <li className='nav-list-items'>
+      <div className="icon-container"
         onMouseEnter={(event) => changeColor({color: Colors.home, element:`${props.name}-background`})}
         onMouseLeave={(event) => removeColor({color: Colors.home, element: `${props.name}-background`})}
-        className="list-items-home">
-      <Link  to={props.name == "home" ? "/" : `/${props.name}`}><FontAwesomeIcon icon={props.icon} style={{color: Colors.BLUE}} /></Link>
-      <div className='link-items-home' id={`${props.name}-background`} style={{backgroundColor: Colors.home}}>
-        <Link to={props.name == "home" ? "/" : `/${props.name}`} style={{color: Colors.BLUE}}
+      >
+        <Link  to={props.name == "home" ? "/" : `/${props.name}`}><FontAwesomeIcon icon={props.icon} style={{color: Colors.BLUE}} /></Link>
+      </div>
+      <div className='link-container' id={`${props.name}-background`}>
+        <Link to={props.name == "home" ? "/" : `/${props.name}`}
               onMouseEnter={(event) => changeColor({color: Colors.home, element:`${props.name}-background`})}
               onMouseLeave={(event) => removeColor({color: Colors.home, element: `${props.name}-background`})}>{Capitalize(props.name)}</Link>
       </div>
-    </li>
-  )
-}
-
-export function AboutNavComponents(props) {
-  return (
-    <li id={props.name}>
-        <Link to={props.name == "home" ? "/" : `/${props.name}`} style={{color: Colors.BLUE}}
-              onMouseEnter={(event) => changeColor({color: Colors[props.name]})}
-              onMouseLeave={(event) => removeColor({color: Colors[props.current]})}>{Capitalize(props.name)}</Link>
     </li>
   )
 }

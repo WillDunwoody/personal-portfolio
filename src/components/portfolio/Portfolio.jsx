@@ -21,11 +21,40 @@ export default function Portfolio() {
              "The goal of this app was to create a space where you could challenge your friends or other players in coding challenges."]
   })
 
+  useEffect(() => {
+    const ids = ['nav-container', 'portfolioheader', 'teki', 'mindbubble', 'classicars', 'watchlist', 'coverimage', 'comptitle', 'comptext', 'compbutton']
+    let time = 100
+
+    ids.forEach((id) => {
+      setTimeout(() => {
+        document.getElementById(id).style.opacity = 1
+       }, time)
+       time += 200
+    })
+   })
+
   const openComponent = (comp) => {
-    setComp(comp)
+    const ids = ['comptitle', 'comptext', 'compbutton']
+    let time = 700
+
+    ids.map((id) => {
+      let doc = document.getElementById(id)
+      doc.style.transition = "0.5s"
+      doc.style.opacity = 0
+    })
+
     setTimeout(() => {
-      document.getElementById('cover-image').style.opacity = 1
-     }, 300)
+      setComp(comp)
+     }, 500)
+
+    ids.forEach((id) => {
+    setTimeout(() => {
+      let doc = document.getElementById(id)
+      doc.style.transition = "1.5s"
+      doc.style.opacity = 1
+      }, time)
+      time += 200
+    })
   }
 
   const pjctComps = {
@@ -35,14 +64,18 @@ export default function Portfolio() {
       code: "https://github.com/NicFie/Teki",
       live: "https://teki-tournie.herokuapp.com/dashboard",
       text: ["Teki is a coding battle web app! Play against other users in a race to solve coding problems!",
-             "The goal of this app was to create a space where you could challenge your friends or other players in coding challenges."]
+             "The goal of this app was to create a space where you could battle your friends or other players in coding challenges.",
+             "Built with Ruby on Rails we utilize stimulus and AJAX to create channels so that everything is in real time.",
+             "If you would like to give it a go two players can login as guest1, guest2 and passwords are pa55w0rd",]
     },
     mindbubble: {
       name: "Mind-Bubble",
       imgSrc: MBDashboard,
       code: "https://github.com/CaptainKurt91/mind-bubble",
       live: "https://www.mind-bubble.com/",
-      text: ["An app built to help people with ADHD navigate the world."]
+      text: ["An app built to help people with ADHD navigate the world.",
+             "As people with ADHD struggle to read lists we decided to create a mobile webapp that lets users create a sort of mind-map to help organize their thoughts and daily routines.",
+             "If you would like to test it out you can log in as guest with password pa55w0rd ps: should be viewed in mobile mode."]
     },
     classicars: {
       name: "ClassiCars",
@@ -57,21 +90,8 @@ export default function Portfolio() {
       code: "https://github.com/WillDunwoody/rails-watch-list",
       live: "https://mysite-x2vo.onrender.com/" ,
       text: ["Lorem ipsum black faklsjflsadkj ebgbjkab enklakjnsd"]
-    },
-    tictactoe: {
-      name: "Tic-Tac-Toe",
-      imgSrc: ttt1,
-      code: "https://github.com/WillDunwoody/tic-tac-toe",
-      live: "https://willdunwoody.github.io/tic-tac-toe/",
-      text: ["Lorem ipsum black faklsjflsadkj ebgbjkab enklakjnsd"]
     }
   };
-
-  useEffect(() => {
-    setTimeout(() => {
-     document.getElementById('nav-container').style.opacity = 1
-    }, 100)
-  });
 
   return (
     <div className="home-container">
@@ -79,12 +99,11 @@ export default function Portfolio() {
         <Navbar />
       </div>
       <div className="portfolio-left-container">
-        <h1 className="portfolio-header">Port<span className="color-yellow">folio</span></h1>
-        <div className="project-name" onClick={() => openComponent(pjctComps.teki)}>Teki</div>
-        <div className="project-name" onClick={() => openComponent(pjctComps.mindbubble)}>Mind Bubble</div>
-        <div className="project-name" onClick={() => openComponent(pjctComps.classicars)}>ClassiCars</div>
-        <div className="project-name" onClick={() => openComponent(pjctComps.watchlist)}>Watch List</div>
-        <div className="project-name" onClick={() => openComponent(pjctComps.tictactoe)}>Tic Tac Toe</div>
+        <h1 className="portfolio-header trans" id="portfolioheader">Port<span className="color-yellow">folio</span></h1>
+        <div className="project-name trans" id="teki" onClick={() => openComponent(pjctComps.teki)}>Teki</div>
+        <div className="project-name trans" id="mindbubble"onClick={() => openComponent(pjctComps.mindbubble)}>Mind Bubble</div>
+        <div className="project-name trans" id="classicars"onClick={() => openComponent(pjctComps.classicars)}>ClassiCars</div>
+        <div className="project-name trans" id="watchlist"onClick={() => openComponent(pjctComps.watchlist)}>Watch List</div>
       </div>
       <div className="portfolio-right-container" id="project-container">
         <ProjectComponent name={comp.name} img={comp.imgSrc} code={comp.code} live={comp.live} text={comp.text}/>

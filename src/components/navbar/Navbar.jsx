@@ -1,32 +1,32 @@
-
+import { Link, Route, Routes, } from 'react-router-dom'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Colors from '../../utilities/Color'
-import { HomeNavComponents, AboutNavComponents } from './NavComponents'
+import { HomeNavComponents } from './NavComponents'
 import { faUser, faFolder, faEnvelope, faHome } from '@fortawesome/free-solid-svg-icons'
 import './Navbar.css'
 
+const showLink = (id) => {
+  let doc = document.getElementById(id)
+  doc.style.opacity = 1
+  doc.style.zIndex = 10
+}
 
-function HomeNav(props) {
+const removeLink = (id) => {
+  let doc = document.getElementById(id)
+  doc.style.opacity = 0
+  doc.style.zIndex = -100
+}
+
+
+export default function HomeNav() {
   return (
-    <div id="navbar" className="navbar-home" style={{backgroundColor: Colors.home}}>
-      <ul>
-        <HomeNavComponents name={props.one} icon={props.oneIcon} />
-        <HomeNavComponents name={props.two} icon={props.twoIcon} />
-        <HomeNavComponents name={props.three} icon={props.threeIcon} />
+    <div id="navbar" className="navbar" style={{backgroundColor: Colors.home}}>
+      <ul className='nav-list'>
+        <HomeNavComponents name="home" icon={faHome} />
+        <HomeNavComponents name="about" icon={faUser} />
+        <HomeNavComponents name="portfolio" icon={faFolder} />
+        {/* <HomeNavComponents name="contact" icon={faEnvelope} /> */}
       </ul>
     </div>
   )
 }
-
-function Navbar() {
-  if(window.location.pathname == "/") {
-    return <HomeNav one="about" oneIcon={faUser} two="portfolio" twoIcon={faFolder} three="contact" threeIcon={faEnvelope} />
-  } else if(window.location.pathname == "/about")  {
-    return <HomeNav one="home" oneIcon={faHome} two="portfolio" twoIcon={faFolder} three="contact" threeIcon={faEnvelope} />
-  } else if(window.location.pathname == "/portfolio")  {
-    return <HomeNav one="home" oneIcon={faHome} two="about" twoIcon={faUser} three="contact" threeIcon={faEnvelope} />
-  } else if(window.location.pathname == "/contact")  {
-    return <HomeNav one="home" oneIcon={faHome} two="about" twoIcon={faUser} three="portfolio" threeIcon={faFolder} />
-  }
-}
-
-export default Navbar

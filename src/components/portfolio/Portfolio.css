@@ -67,12 +67,11 @@
 }
 
 .cover-image {
-  opacity: 0;
-  transition: 1s;
   height: 35vh;
   width: 100%;
   background-repeat: no-repeat;
   background-size: cover;
+  margin: 0;
 }
 
 .button-container {
